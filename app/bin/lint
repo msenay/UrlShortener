@@ -1,0 +1,11 @@
+#!/bin/bash
+set -ex
+
+# Change directory to the root of the project
+cd "$(dirname "$0")/.."
+
+# Run Ruff
+ruff check .
+
+# Run MyPy
+mypy ../app
